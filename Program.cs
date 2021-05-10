@@ -33,7 +33,12 @@ namespace textEditor
         }
         static void Editar()
         {
-
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo (ESC para sair)");
+            Console.WriteLine("________________________");
+            string text = "";
+            while (Console.ReadKey().Key != ConsoleKey.Escape)
+            { }
         }
     }
 }
