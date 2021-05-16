@@ -38,7 +38,8 @@ namespace textEditor
             Console.WriteLine("________________________");
             string text = "";
             while (Console.ReadKey().Key != ConsoleKey.Escape)
-            { }
+            { text}
+
         }
     }
 }
