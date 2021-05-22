@@ -46,5 +46,12 @@ namespace textEditor
             Console.Write(text);
             Menu();
         }
+        static void Salvar(string text)
+        {
+            Console.Clear();
+            Console.WriteLine("Qual caminho para salvar o arquivo?");
+            Console.WriteLine("________________________");
+            var path = Console.ReadLine();
+        }
     }
 }
