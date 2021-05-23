@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace textEditor
 {
@@ -52,6 +53,9 @@ namespace textEditor
             Console.WriteLine("Qual caminho para salvar o arquivo?");
             Console.WriteLine("________________________");
             var path = Console.ReadLine();
+
+            using var file = new StreamWriter(path);
+            file.Write(text);
         }
     }
 }
