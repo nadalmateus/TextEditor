@@ -44,8 +44,7 @@ namespace textEditor
                 text += Environment.NewLine;
             }
             while (Console.ReadKey().Key != ConsoleKey.Escape);
-            Console.Write(text);
-            Menu();
+            Salvar(text);
         }
         static void Salvar(string text)
         {
@@ -56,6 +55,10 @@ namespace textEditor
 
             using var file = new StreamWriter(path);
             file.Write(text);
+
+            Console.WriteLine("$ Arquivo salvo com sucesso ! {path}");
+            Console.ReadLine();
+            Menu();
         }
     }
 }
